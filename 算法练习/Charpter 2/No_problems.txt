@@ -1,3 +1,4 @@
 017.cpp
-020.cpp(p49)
+020.cpp (p49)
 023.cpp strcat有换行符
+036.cpp strcut结构体指针成员问题
