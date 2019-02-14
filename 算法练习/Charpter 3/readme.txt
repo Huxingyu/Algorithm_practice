@@ -1,0 +1,1 @@
+1,runtime error常见错误是scanf没有&输入量；
