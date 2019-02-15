@@ -1,24 +1,29 @@
 #include <stdio.h>
 
 int main(){
-    int n;
+    int row,col;
     char x;
-    scanf("%d %c",&n,&x);
-    for(int i=0;i<n;i++){
+    scanf("%d %c",&col,&x);
+    for(int i=0;i<col;i++){
         printf("%c",x);
     }
     printf("\n");
-    for(int i=0;i<n/2-2;i++){
+    if(col%2==0){
+        row=col/2;
+    }
+    else{
+        row=(col+1)/2;
+    }
+    for(int i=1;i<row-2;i++){
         printf("%c",x);
-        for(int j=0;j<2*n-3;j++){
+        for(int j=0;j<col-2;j++){
             printf(" ");
         }
         printf("%c",x);
         printf("\n");
     }
-    for(int i=0;i<n;i++){
+    for(int i=0;i<col;i++){
         printf("%c",x);
     }
-    printf("\n");
     return 0;
 }
