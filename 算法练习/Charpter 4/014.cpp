@@ -12,17 +12,17 @@ void function(int x){
         count++;
         return;     //这儿在这儿具体是什么意思
     }
-    for(int i=1;i<=n;i++){
-        if(hashtable[i]==false){
-            bool temp=true;
-            for(int j=1;j<=n;j++){    //这儿为什么没用j=i+1
-                if(abs(i-j)==abs(p[i]-p[j])){   //这个计算式不对
+    for(int i=1;i<=n;i++){  //行
+        if(hashtable[i]==false){    //i行无皇后
+            bool temp=true;         
+            for(int j=1;j<x;j++){    //遍历之前的皇后
+                if(abs(x-j)==abs(i-p[j])){   //（列相减）=（行相减）
                     temp=false;
                     break;
                 }
             }
             if(temp){
-                p[x]=i;
+                p[x]=i;//x列皇后的行号i
                 hashtable[i]=true;
                 function(x+1);
                 hashtable[i]=false;
