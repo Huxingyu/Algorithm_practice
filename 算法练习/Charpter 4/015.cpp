@@ -1,43 +1,40 @@
-#include <cstdio>
-#include <math.h>
-const int maxn = 11;
+#include <stdio.h>
+#include <algorithm>
 
-int n, P[maxn], hashTable[maxn] = { false }; //P为当前排列，hashTable记录整数x是否已经在P中
-int count = 0;
+using namespace std;
 
-void generateP(int index) {
+int n,req,stun,sell;
+double ans=0;
+struct mooncake{
+    double store;
+    double sell;
+    double price; 
+}cake[10];
 
-    //递归边界，生成一个排列
-    if (index == n + 1) {
-        bool flag = true; //flag为true表示当前排列为一个合法方案
-        //遍历任意两个皇后
-        for (int i = 1; i <= n; i++) {
-            for (int j = i + 1; j <= n; j++) {
-                //如果在一条对角线上
-                if (abs(i - j) == abs(P[i] - P[j]))
-                    flag = false; //不合法
-            }
-        }
-        if (flag)
-            count++;
-        return;
-    }
-
-    for (int x = 1; x <= n; x++) {
-        if (hashTable[x] == false) {
-            P[index] = x;
-            hashTable[x] = true;
-            generateP(index + 1);
-            hashTable[x] = false;
-        }
-    }
+bool cmp(mooncake x,mooncake y){
+    return x.price>y.price;
 }
 
-int main() {
-    while (scanf("%d", &n) != EOF) {
-        count = 0;
-        generateP(1);
-        printf("%d\n", count);
+int main(){
+    scanf("%d %d",&n,&req);
+    for(int i=0;i<n;i++){
+        scanf("%lf",&cake[i].store);   //forget "&"
     }
+    for(int i=0;i<n;i++){
+        scanf("%lf",&cake[i].sell);
+        cake[i].price=cake[i].sell/cake[i].store;
+    }
+    sort(cake,cake+n,cmp);
+    for(int i=0;i<n;i++){
+        if(cake[i].store<req){
+            req-=cake[i].store;
+            ans+=cake[i].sell;
+        }
+        else{
+            ans+=cake[i].price*req;
+            break;  //if this programm be load once,break.
+        }
+    }
+    printf("%d",ans);
     return 0;
 }
