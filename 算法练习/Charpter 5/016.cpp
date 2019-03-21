@@ -50,5 +50,4 @@ int main(){
     num y=sub(one,two);
     _print(y);
     return 0;
-
 }
