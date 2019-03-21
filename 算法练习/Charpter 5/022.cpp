@@ -3,17 +3,12 @@
 typedef long long ll;
 
 ll cal(ll n,ll m){
-    ll ans=1;
-    for(ll i=0;i<n;i++){
-        ans *=i;
+    if(m==n||m==0){ //m==n==0?
+        return 1;
     }
-    for(ll i=0;i<m;i++){
-        ans /=i;
+    else{
+        return cal(n-1,m)+cal(n-1,m-1);
     }
-    for(ll i=0;i<n-m;i++){
-        ans /=i;
-    }
-    return ans;
 }
 
 int main(){
