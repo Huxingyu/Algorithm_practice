@@ -18,6 +18,20 @@
 
 4,Map
     - **映射**
-    ![常用于](http:- ww1.sinaimg.cn/large/006kDro9ly1g1dqhtrp22j30ul03odic.jpg)
+    ![常用于](http://ww1.sinaimg.cn/large/006kDro9ly1g1dqhtrp22j30ul03odic.jpg)
 
-5，
+5，Queue
+    - **队列**
+    - 先进先出
+    ![常用于](http://ww1.sinaimg.cn/large/006kDro9ly1g1ds3gelv6j30xj04y0vo.jpg)
+
+6，Priority_queue
+    - **优先队列**
+    - operator 重载操作符
+    - 功能与sort函数相反
+    - 结构体数组比较庞大时，需要引用来提高效率
+    ![常用于](http://ww1.sinaimg.cn/large/006kDro9ly1g1eap6gudzj30xp02cmyf.jpg)
+
+7,Stacj
+    - **栈**
+    - 后入先出
