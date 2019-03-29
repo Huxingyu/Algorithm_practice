@@ -32,6 +32,7 @@
     - 结构体数组比较庞大时，需要引用来提高效率
     ![常用于](http://ww1.sinaimg.cn/large/006kDro9ly1g1eap6gudzj30xp02cmyf.jpg)
 
-7,Stacj
+7,Stack
     - **栈**
     - 后入先出
+    - ![use](http://ww1.sinaimg.cn/large/006kDro9ly1g1k32gloyhj30y5054wig.jpg)
