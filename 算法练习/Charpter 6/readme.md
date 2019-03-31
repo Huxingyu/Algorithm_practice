@@ -1,6 +1,7 @@
 0，STL中介绍一些常见而且好用的容器；
     - node代表结构体类型；
     - insert,erase以迭代器为参数；
+    - **数组->指针，容器->迭代器**；
     - STL可分为容器(containers)、迭代器(iterators)、空间配置器(allocator)、配接器(adapters)、算法(algorithms)、仿函数(functors)六个部分。
 
 1,Vector：
@@ -36,3 +37,5 @@
     - **栈**
     - 后入先出
     - ![use](http://ww1.sinaimg.cn/large/006kDro9ly1g1k32gloyhj30y5054wig.jpg)
+
+8，
