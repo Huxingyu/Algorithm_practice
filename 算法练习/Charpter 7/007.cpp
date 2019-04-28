@@ -25,3 +25,4 @@ node Inilist(_node space){  //链表初始化->数组初始化
     space[maxsize-1].cur=0;
     return ok;              //啥意思
 }
+
